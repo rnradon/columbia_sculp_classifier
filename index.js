@@ -27,36 +27,14 @@ const demo = async () => {
   status('');
 
   // Make a prediction through the locally hosted cat.jpg.
-  const catElement1 = document.getElementById('cat1');
-  if (catElement1.complete && catElement1.naturalHeight !== 0) {
-    predict(catElement1);
-    catElement1.style.display = '';
+  const catElement = document.getElementById('cat');
+  if (catElement.complete && catElement.naturalHeight !== 0) {
+    predict(catElement);
+    catElement.style.display = '';
   } else {
-    catElement1.onload = () => {
-      predict(catElement1);
-      catElement1.style.display = '';
-    }
-  }
-
-  const catElement2 = document.getElementById('cat2');
-  if (catElement2.complete && catElement2.naturalHeight !== 0) {
-    predict(catElement2);
-    catElement2.style.display = '';
-  } else {
-    catElement2.onload = () => {
-      predict(catElement2);
-      catElement2.style.display = '';
-    }
-  }
-
-  const catElement3 = document.getElementById('cat3');
-  if (catElement3.complete && catElement3.naturalHeight !== 0) {
-    predict(catElement3);
-    catElement3.style.display = '';
-  } else {
-    catElement3.onload = () => {
-      predict(catElement3);
-      catElement3.style.display = '';
+    catElement.onload = () => {
+      predict(catElement);
+      catElement.style.display = '';
     }
   }
 
